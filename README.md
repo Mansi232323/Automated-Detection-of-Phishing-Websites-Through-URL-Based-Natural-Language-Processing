@@ -1,2 +1,2 @@
-# Automated-Detection-of-Phishing-Websites-Through-URL-Based-Natural-Language-Processing-
+# Automated-Detection-of-Phishing-Websites-Through-URL-Based-Natural-Language-Processing
 Phishing is a major cybersecurity threat, with malicious URLs used to steal sensitive data. Traditional blacklist methods are ineffective against evolving attacks. This study benchmarks ML, DL, and transformer models using URL features from CommonCrawl, PhishTank, and Kaggle, enabling fast and efficient phishing detection.
