@@ -916,33 +916,6 @@ F1 = 2 \times \frac{Precision \times Recall}{Precision + Recall}
 
 ---
 
-# 🔬 Conclusion
-
-This project presents a comprehensive investigation of **automated phishing website detection using URL-based Natural Language Processing and Machine Learning techniques**.
-
-The project does not limit the investigation to a single model or a single dataset. Instead, it evaluates multiple model families across progressively larger URL datasets.
-
-The experiments cover approximately:
-
-### **1.56 Lakh → 5 Lakh → 15 Lakh URLs**
-
-The **5-lakh and 15-lakh datasets use CommonCrawl and PhishTank**, enabling large-scale phishing URL experiments.
-
-The reported results demonstrate strong performance across multiple approaches:
-
-* **1D CNN:** 96.76% testing accuracy on the 1.56-lakh experiment
-* **BiLSTM + Attention:** 97.45% F1-score on the 1.56-lakh experiment
-* **GRU:** 99.09% recall on the 1.56-lakh experiment
-* **Random Forest:** 93.21% accuracy on the 5-lakh experiment
-* **DistilBERT:** 92.60% accuracy on the 5-lakh Transformer experiment
-* **RoBERTa:** 97.05% recall on the 5-lakh Transformer experiment
-* **Random Forest:** 95.55% accuracy on the 15-lakh experiment
-* **RoBERTa:** 96.20% accuracy on the reported 15-lakh Transformer experiment
-
-Overall, the project demonstrates the potential of **URL-based ML, Deep Learning, and Transformer approaches for automated phishing URL classification**, while the progression from **1.56 lakh to 5 lakh and 15 lakh URLs** provides a broader evaluation of the approaches at different data scales.
-
----
-
 # Conclusion
 
 This major project, **“Automated Detection of Phishing Websites Through URL-Based Natural Language Processing,”** presents a comprehensive approach for detecting phishing websites by analyzing the textual and structural characteristics of URLs. The primary objective of the project was to develop and evaluate an automated system capable of distinguishing phishing URLs from legitimate URLs using **Machine Learning, Deep Learning, Natural Language Processing, and Transformer-based models**.
