@@ -1,5 +1,3 @@
-Yes. I’ll rewrite the **README completely from the beginning**, in a detailed, professional GitHub format, while keeping your actual project information and reported results. I’ll also include the **ML and Transformer tables from your screenshot** in the Results section. The project scope, datasets, models, workflow, metrics, and existing findings are supported by your uploaded README. 
-
 # 🔐 Automated Detection of Phishing Websites Through URL-Based Natural Language Processing
 
 > **An end-to-end Machine Learning, Deep Learning, and Transformer-based cybersecurity framework for automated phishing URL detection.**
