@@ -866,31 +866,7 @@ and:
 * ALBERT
 * TinyBERT
 
----
 
-# 📂 Project Structure
-
-A possible project organization is:
-
-```text
-Automated-Detection-of-Phishing-Websites-Through-URL-Based-Natural-Language-Processing/
-│
-├── README.md
-│
-├── 15_lakh_dataset/
-│   └── ...
-│
-├── 5_lakh_dataset/
-│   └── ...
-│
-├── 1.56_lakh_dataset/
-│   └── ...
-│
-├── MY_kaggle.ipynb
-│
-└── results/
-    └── ...
-```
 
 ---
 
@@ -965,21 +941,22 @@ Overall, the project demonstrates the potential of **URL-based ML, Deep Learning
 
 ---
 
-# ⭐ Project Highlights
+# Conclusion
 
-```text
-🔐 Automated Phishing URL Detection
-🧠 Machine Learning
-🤖 Deep Learning
-📝 Natural Language Processing
-🤗 Transformer Models
-🌐 CommonCrawl + PhishTank
-📊 1.56 Lakh URLs
-📊 5 Lakh URLs
-📊 15 Lakh URLs
-📈 Multi-Metric Performance Evaluation
-⚡ Training-Time Comparison
-🏆 Model Performance Comparison
-```
+This major project, **“Automated Detection of Phishing Websites Through URL-Based Natural Language Processing,”** presents a comprehensive approach for detecting phishing websites by analyzing the textual and structural characteristics of URLs. The primary objective of the project was to develop and evaluate an automated system capable of distinguishing phishing URLs from legitimate URLs using **Machine Learning, Deep Learning, Natural Language Processing, and Transformer-based models**.
 
-**Note:** All numerical results above are transcribed from the result tables/screenshots you provided. Where the source results did not report a metric, it is not added or estimated.
+A major strength of the project is its evaluation across **multiple dataset sizes**, including approximately **1.56 lakh, 5 lakh, and 15 lakh URLs**. The larger datasets were obtained using **CommonCrawl and PhishTank**, allowing the proposed approaches to be evaluated on increasingly large-scale URL collections rather than relying on a small dataset alone.
+
+The experiments demonstrate that different model architectures have different strengths. On the **1.56-lakh dataset**, Deep Learning models produced particularly strong results, with **1D CNN achieving 96.76% testing accuracy**, while **BiLSTM with Attention achieved the highest F1-score of 97.45%**. GRU achieved a very high recall of **99.09%**, demonstrating its ability to identify a large proportion of phishing URLs.
+
+On the **5-lakh CommonCrawl and PhishTank dataset**, **Random Forest achieved 93.21% accuracy and 92.98% F1-score**, making it the strongest reported traditional Machine Learning model in that experiment. Among the evaluated Transformer models, **DistilBERT achieved 92.60% accuracy and 92.40% F1-score**, while **RoBERTa achieved 97.05% recall**.
+
+The largest experiment, involving approximately **15 lakh URLs**, further demonstrated the capability of the project to work with large-scale data. In this experiment, **Random Forest achieved 95.55% accuracy, 95.56% precision, 95.26% recall, and 95.41% F1-score**. Among the reported Transformer models for this experiment, **RoBERTa achieved 96.20% accuracy and 96.08% F1-score**, showing strong performance on the large URL dataset.
+
+Overall, the project demonstrates that **URL-based analysis can provide an effective foundation for automated phishing detection**. The comparison of traditional Machine Learning, Deep Learning, and Transformer architectures provides valuable insight into the strengths and trade-offs of different approaches. The results also show that increasing the dataset scale enables the system to be evaluated under more realistic large-scale conditions.
+
+The project successfully combines **cybersecurity, Natural Language Processing, Machine Learning, and Deep Learning** into a unified phishing detection framework. The work establishes a strong foundation for future development of more scalable and intelligent phishing detection systems. Future extensions can focus on improving generalization to newly emerging phishing URLs, incorporating additional URL and domain-level information, optimizing computational requirements, and developing real-time deployment mechanisms.
+
+### **In conclusion, this major project demonstrates the feasibility of building an automated and data-driven phishing URL detection system and provides a detailed comparative evaluation of multiple ML, DL, and Transformer-based approaches across datasets ranging from 1.56 lakh to 15 lakh URLs.**
+
+
