@@ -1,34 +1,46 @@
 # 🛡️ Automated Detection of Phishing Websites Through URL-Based Natural Language Processing
 
-An intelligent machine-learning and deep-learning based system for the **automated detection of phishing and legitimate websites using URL-based analysis**.
+## 📌 Project Overview
 
-The project investigates whether the structure, patterns, lexical characteristics, and sequential representation of a URL can be used to identify potentially malicious websites without relying exclusively on webpage content.
+Phishing is a major cybersecurity threat in which attackers create deceptive websites and URLs to trick users into revealing sensitive information such as usernames, passwords, banking credentials, and other personal data.
 
-The system evaluates multiple Machine Learning, Deep Learning, and Transformer-based models across **large-scale URL datasets**, including experiments involving approximately **1.56 lakh, 5 lakh, and 15 lakh URLs**.
+This project focuses on developing an **automated phishing URL detection system** using **Natural Language Processing (NLP), Machine Learning (ML), Deep Learning (DL), and Transformer-based models**.
 
-# 📖 Project Overview
+Instead of depending only on webpage content, the project analyzes the **URL itself** and learns patterns that can differentiate between:
 
-Phishing is one of the most common cybersecurity threats in which attackers create malicious websites or URLs that imitate legitimate websites in order to deceive users.
+* ✅ **Legitimate URLs**
+* 🚨 **Phishing URLs**
 
-A phishing URL may attempt to:
+The project was evaluated on **multiple large-scale URL datasets**, including:
 
-* Steal login credentials
-* Capture personal information
-* Collect financial information
-* Redirect users to malicious websites
-* Distribute malware
-* Perform social engineering attacks
-* Impersonate trusted organizations
+* **1.56 Lakh URLs**
+* **5 Lakh URLs**
+* **15 Lakh URLs**
 
-Traditional phishing detection systems may depend on:
+The **5 Lakh and 15 Lakh datasets were created using URLs from CommonCrawl and PhishTank**, allowing the system to be evaluated on a significantly larger and more diverse collection of URLs.
 
-* Blacklists
-* Website content
-* Domain reputation
-* Manual inspection
-* Browser-based security mechanisms
+---
 
-However, URL-based analysis provides an important alternative because a URL itself contains many potentially useful characteristics.
+# 🎯 Problem Statement
+
+The objective of this project is to develop an intelligent system that can automatically classify a URL as **legitimate or phishing** based on its structural and textual characteristics.
+
+The system investigates whether URL patterns can be effectively learned using:
+
+1. Traditional Machine Learning algorithms
+2. Deep Learning architectures
+3. NLP-based sequence models
+4. Transformer architectures
+
+The ultimate goal is to build a scalable phishing detection approach capable of processing **hundreds of thousands to millions of URLs**.
+
+---
+
+# 💡 Motivation
+
+Phishing attacks continue to evolve, making static detection approaches less effective against newly generated malicious URLs.
+
+A URL often contains useful information that can indicate suspicious behavior.
 
 For example:
 
@@ -36,91 +48,65 @@ For example:
 https://example.com/login
 ```
 
-can be analyzed according to:
-
-* Length
-* Domain
-* Number of special characters
-* Number of subdomains
-* Presence of suspicious keywords
-* Number of digits
-* Character patterns
-* URL structure
-* Token sequence
-* Path characteristics
-* Query parameters
-
-This project therefore investigates **URL-based Natural Language Processing and Machine Learning techniques** for automated phishing website detection.
-
----
-
-# 🎯 Problem Statement
-
-The primary problem addressed by this project is:
-
-> **To develop an automated system capable of distinguishing phishing URLs from legitimate URLs using URL-based features, machine-learning algorithms, deep-learning architectures, and Transformer-based Natural Language Processing techniques.**
-
-The project aims to determine whether a URL can be treated as a sequence of meaningful characters/tokens and whether these patterns can be learned automatically by classification models.
-
----
-
-# 💡 Motivation
-
-The motivation behind this project is the increasing number of malicious and phishing URLs generated across the internet.
-
-A phishing detection system should ideally be:
-
-* Automated
-* Fast
-* Scalable
-* Accurate
-* Capable of processing large volumes of URLs
-* Less dependent on manually maintained blacklists
-* Capable of identifying previously unseen URL patterns
-
-Therefore, this project experiments with datasets of different scales:
+and
 
 ```text
-1.56 Lakh URLs
-       ↓
-5 Lakh URLs
-       ↓
-15 Lakh URLs
+http://example-secure-login-example.xyz/verify/account
 ```
 
-This allows the project to move from a detailed model comparison toward **large-scale URL classification and scalability analysis**.
+may have very different structural and lexical characteristics.
+
+The project therefore investigates whether these characteristics can be learned automatically by computational models.
+
+A major focus of the project is **scalability**.
+
+Instead of evaluating the models on only a small dataset, experiments were conducted across progressively larger datasets:
+
+```text
+1.56 Lakh
+     ↓
+5 Lakh
+     ↓
+15 Lakh
+```
+
+This allows the project to investigate phishing detection at increasingly large scales.
 
 ---
 
 # 🎯 Objectives
 
-The major objectives of this project are:
+The main objectives of the project are:
 
 ### 1. Automated Phishing Detection
 
-Develop a system that automatically classifies URLs as phishing or legitimate.
+Develop an automated system capable of classifying URLs into phishing and legitimate categories.
 
-### 2. URL-Based Analysis
+### 2. URL-Based Classification
 
-Use characteristics contained within URLs instead of relying only on webpage content.
+Use the URL itself as the primary source of information for classification.
 
-### 3. Machine Learning Comparison
+### 3. Machine Learning Evaluation
 
-Compare different traditional Machine Learning algorithms.
+Evaluate different traditional ML algorithms and compare their performance.
 
-### 4. Deep Learning Comparison
+### 4. Deep Learning Evaluation
 
-Investigate whether sequence-based Deep Learning models can learn useful URL representations.
+Investigate CNN, RNN, LSTM, GRU, BiLSTM, Attention, and hybrid architectures.
 
 ### 5. Transformer-Based NLP
 
-Evaluate Transformer architectures for URL classification.
+Evaluate Transformer models for URL sequence classification.
 
-### 6. Large-Scale Evaluation
+### 6. Large-Scale Dataset Evaluation
 
-Experiment with datasets ranging from approximately **1.56 lakh to 15 lakh URLs**.
+Perform experiments on:
 
-### 7. Performance Evaluation
+* **1.56 Lakh URLs**
+* **5 Lakh URLs**
+* **15 Lakh URLs**
+
+### 7. Performance Comparison
 
 Compare models using:
 
@@ -130,245 +116,308 @@ Compare models using:
 * F1-score
 * Training Loss
 * Testing Loss
-* Training Time where available
+* Training Time, where available
 
-### 8. Identify the Best Model
+### 8. Identify High-Performing Models
 
-Determine the strongest-performing architecture for the evaluated dataset and experimental setup.
-
----
-
-# ⭐ Key Features
-
-* URL-based phishing detection
-* Binary classification
-* Large-scale URL datasets
-* Common Crawl URL data
-* PhishTank URL data
-* Feature-based Machine Learning
-* Sequence-based Deep Learning
-* Transformer-based NLP
-* Multiple model comparison
-* Accuracy analysis
-* Precision analysis
-* Recall analysis
-* F1-score analysis
-* Training/testing loss analysis
-* Large-scale experimentation
+Determine the best-performing models for the reported experiments.
 
 ---
 
 # 📊 Dataset Overview
 
-The project uses URL datasets at multiple scales.
+The project uses datasets at three major scales.
 
-The major dataset sizes considered in the project are:
-
-| Dataset       | Approximate Size | Purpose                                                   |
-| ------------- | ---------------: | --------------------------------------------------------- |
-| **1.56 Lakh** |    ~156,000 URLs | Detailed ML, DL and Transformer evaluation                |
-| **5 Lakh**    |    ~500,000 URLs | Large-scale URL experimentation                           |
-| **15 Lakh**   |  ~1,500,000 URLs | Very large-scale Common Crawl + PhishTank experimentation |
+| Dataset       | Approximate Number of URLs | Source                      | Purpose                                    |
+| ------------- | -------------------------: | --------------------------- | ------------------------------------------ |
+| **1.56 Lakh** |                   ~156,000 | Project dataset             | Detailed ML, DL and Transformer comparison |
+| **5 Lakh**    |               **~500,000** | **CommonCrawl + PhishTank** | Large-scale experimentation                |
+| **15 Lakh**   |             **~1,500,000** | **CommonCrawl + PhishTank** | Very large-scale ML experimentation        |
 
 ---
 
 # 🌐 Data Sources
 
-The project uses URL information from sources including:
+## 1. CommonCrawl
 
-### Common Crawl
+CommonCrawl provides large-scale web crawl data from which URLs can be collected.
 
-Common Crawl provides a very large collection of web crawl data that can be used to obtain legitimate web URLs.
+In this project, CommonCrawl data contributes to the large-scale URL dataset.
 
-### PhishTank
+---
 
-PhishTank provides phishing-related URL information that can be used for malicious/phishing URL examples.
+## 2. PhishTank
 
-The combination can be represented as:
+PhishTank provides phishing URL data.
+
+These URLs represent the **phishing/malicious class** used for phishing detection experiments.
+
+---
+
+# 📦 1.56 Lakh URL Dataset
+
+The first major experimental dataset contains approximately:
+
+# **1.56 Lakh URLs**
+
+or approximately:
+
+### **156,000 URLs**
+
+This dataset was used for a detailed comparison between:
+
+* Traditional Machine Learning
+* Deep Learning
+* Transformer models
+
+The 1.56-lakh experiment provides the most extensive model-level comparison in the reported results.
+
+---
+
+# 📦 5 Lakh URL Dataset
+
+The second major dataset contains approximately:
+
+# **5 Lakh URLs**
+
+or:
+
+### **500,000 URLs**
+
+### Source:
+
+**CommonCrawl + PhishTank**
+
+The 5-lakh dataset was specifically created using URL data from these two sources.
+
+The dataset can therefore be represented as:
 
 ```text
-                 URL DATA
-                    │
-        ┌───────────┴───────────┐
-        │                       │
-        ▼                       ▼
-   Common Crawl             PhishTank
-        │                       │
-        ▼                       ▼
- Legitimate URLs           Phishing URLs
-        │                       │
-        └───────────┬───────────┘
-                    ▼
-             Combined Dataset
-                    │
-                    ▼
-              Classification
+                 5 LAKH URL DATASET
+                         │
+              ┌──────────┴──────────┐
+              │                     │
+              ▼                     ▼
+         CommonCrawl             PhishTank
+              │                     │
+              ▼                     ▼
+       Web URL Data          Phishing URL Data
+              │                     │
+              └──────────┬──────────┘
+                         ▼
+                  Combined Dataset
+                         │
+                         ▼
+                   ~500,000 URLs
 ```
 
----
-
-# 📦 Dataset Scale
-
-One of the important aspects of this project is the use of progressively larger datasets.
-
-## 1.56 Lakh
-
-Approximately:
-
-**156,000 URLs**
-
-This experiment contains the most detailed model comparison, including traditional Machine Learning, Deep Learning, and Transformer approaches.
+The purpose of using 5 lakh URLs is to provide a considerably larger dataset for evaluating the scalability of the phishing detection pipeline.
 
 ---
 
-## 5 Lakh
+# 📦 15 Lakh URL Dataset
 
-Approximately:
+The largest dataset contains approximately:
 
-**500,000 URLs**
+# **15 Lakh URLs**
 
-This represents a significant increase in dataset size and allows large-scale Machine Learning experimentation.
+or:
+
+### **1,500,000 URLs**
+
+The dataset uses:
+
+**CommonCrawl + PhishTank**
+
+as its major URL sources.
+
+This experiment extends the project from hundreds of thousands of URLs to approximately **1.5 million URLs**, providing a large-scale environment for evaluating Machine Learning models.
 
 ---
 
-## 15 Lakh
+# 📈 Dataset Scale Comparison
 
-Approximately:
+| Dataset       |      Size | CommonCrawl | PhishTank |
+| ------------- | --------: | :---------: | :-------: |
+| **1.56 Lakh** |     ~156K |      —      |     —     |
+| **5 Lakh**    | **~500K** |      ✅      |     ✅     |
+| **15 Lakh**   | **~1.5M** |      ✅      |     ✅     |
 
-**1,500,000 URLs**
+The project therefore progresses from a detailed 156K experiment to large-scale 500K and 1.5M URL experiments.
 
-This is the largest dataset scale used in the project and includes URL data associated with **Common Crawl and PhishTank**.
+---
+
+# 🔄 Overall Project Workflow
+
+```text
+                  URL DATA COLLECTION
+                          │
+           ┌──────────────┴──────────────┐
+           │                             │
+           ▼                             ▼
+      CommonCrawl                    PhishTank
+           │                             │
+           ▼                             ▼
+     Web URL Data                 Phishing URLs
+           │                             │
+           └──────────────┬──────────────┘
+                          ▼
+                   DATA CLEANING
+                          │
+                          ▼
+                  DATA PREPROCESSING
+                          │
+                          ▼
+              FEATURE EXTRACTION /
+                    TOKENIZATION
+                          │
+             ┌────────────┼────────────┐
+             │            │            │
+             ▼            ▼            ▼
+        Machine        Deep         Transformer
+        Learning      Learning          NLP
+             │            │            │
+             └────────────┼────────────┘
+                          ▼
+                    CLASSIFICATION
+                          │
+                          ▼
+                     EVALUATION
+                          │
+           ┌──────────────┼──────────────┐
+           ▼              ▼              ▼
+       Accuracy       Precision        Recall
+                          │
+                          ▼
+                       F1-Score
+```
 
 ---
 
 # 🧹 Data Preprocessing
 
-Before training the models, URLs need to be prepared appropriately.
+Before model training, the collected URLs are processed to make them suitable for classification.
 
-The preprocessing pipeline includes the following general stages:
+The preprocessing stage includes the general steps required for preparing URL data:
+
+### 1. URL Collection
+
+URLs are obtained from the relevant datasets.
+
+### 2. Data Cleaning
+
+Unusable or inappropriate URL records are removed.
+
+### 3. Duplicate Handling
+
+Duplicate URLs are handled to reduce unnecessary repetition in the dataset.
+
+### 4. Label Assignment
+
+URLs are assigned to their corresponding classes.
 
 ```text
-Raw URL Data
-     │
-     ▼
-Data Loading
-     │
-     ▼
-Data Cleaning
-     │
-     ▼
-Data Validation
-     │
-     ▼
-URL Preprocessing
-     │
-     ▼
-Feature Extraction / Tokenization
-     │
-     ▼
-Train-Test Split
-     │
-     ▼
-Model Training
-     │
-     ▼
-Evaluation
+Legitimate → 0
+Phishing   → 1
 ```
 
-The objective of preprocessing is to transform raw URL strings into representations that can be processed by Machine Learning and Deep Learning algorithms.
+### 5. URL Representation
+
+URLs are converted into representations suitable for the selected model.
+
+For Machine Learning:
+
+```text
+URL → Numerical Features
+```
+
+For Deep Learning/NLP:
+
+```text
+URL → Tokens → Sequence Representation
+```
 
 ---
 
 # 🔍 URL Feature Engineering
 
-Traditional Machine Learning models use structured URL characteristics.
+Traditional Machine Learning algorithms require numerical input.
 
-Potential URL characteristics considered in the project include:
+Therefore, relevant characteristics can be extracted from URLs, such as:
 
 * URL length
 * Domain length
-* Path length
 * Number of dots
 * Number of slashes
-* Number of hyphens
 * Number of digits
 * Number of special characters
+* Number of hyphens
 * Number of subdomains
-* Presence of suspicious patterns
-* URL structure
-* Character-level properties
+* Path characteristics
+* Query characteristics
+* Suspicious lexical patterns
 
-These characteristics allow traditional models to work with numerical representations of URLs.
-
----
-
-# 🧠 URL Representation
-
-The project explores two major ways of representing URLs.
-
-## 1. Feature-Based Representation
-
-Used primarily for traditional Machine Learning.
+The general process is:
 
 ```text
-URL
- ↓
+Raw URL
+   ↓
 Feature Extraction
- ↓
+   ↓
 Numerical Feature Vector
- ↓
-Machine Learning Model
- ↓
+   ↓
+Machine Learning
+   ↓
 Prediction
 ```
 
 ---
 
-## 2. Sequence-Based Representation
+# 🧠 URL as a Sequence
 
-Used for Deep Learning and NLP models.
+For Deep Learning and NLP models, the URL can be considered a sequence of characters or tokens.
+
+For example:
 
 ```text
-URL
- ↓
-Tokenization
- ↓
-URL Sequence
- ↓
-Embedding / Representation
- ↓
-Deep Learning Model
- ↓
-Prediction
+https://example.com/login
 ```
 
-This makes it possible to investigate whether Deep Learning models can automatically learn useful patterns from URL sequences.
+can be represented as a sequence of characters/tokens.
+
+This makes URL data suitable for sequence-learning architectures such as:
+
+* RNN
+* LSTM
+* GRU
+* CNN
+* BiLSTM
+* Attention
+* Transformer
 
 ---
 
 # 🤖 Machine Learning Models
 
-The project evaluates multiple Machine Learning algorithms.
+The project evaluates several Machine Learning algorithms, including:
 
-The evaluated models include:
+* Linear Regression
+* Logistic Regression
+* Naive Bayes
+* Decision Tree
+* Random Forest
+* LightGBM
+* XGBoost
+* AdaBoost
+* KNN
+* Linear SVC
+* Voting Classifier
+* Hybrid Ensemble
 
-1. Linear Regression
-2. Logistic Regression
-3. Naive Bayes
-4. Decision Tree
-5. Random Forest
-6. LightGBM
-7. XGBoost
-8. AdaBoost
-9. Hybrid Ensemble
-10. KNN
-11. Linear SVC
-12. Voting Classifier
+These models provide a comparison between:
 
-These models provide a broad comparison between:
-
-* Linear models
-* Probabilistic models
+* Linear approaches
+* Probabilistic approaches
 * Tree-based models
 * Boosting algorithms
 * Ensemble methods
@@ -377,9 +426,7 @@ These models provide a broad comparison between:
 
 # 🧠 Deep Learning Models
 
-The project also evaluates several Deep Learning architectures.
-
-These include:
+The Deep Learning experiments include:
 
 * ANN
 * RNN
@@ -389,37 +436,13 @@ These include:
 * BiLSTM + Attention
 * Hybrid Deep Learning Model
 
-These architectures are particularly useful for sequential URL representations.
-
----
-
-# 🔥 Why Deep Learning for URLs?
-
-URLs can be treated as sequences of characters or tokens.
-
-For example:
-
-```text
-https://example.com/login?id=123
-```
-
-can be represented as a sequence:
-
-```text
-h → t → t → p → s → : → / → / → ...
-```
-
-or as meaningful tokens.
-
-This allows sequence models to learn patterns associated with phishing URLs.
+These models allow the system to learn more complex patterns from URL sequences.
 
 ---
 
 # 🤗 Transformer Models
 
-The project also explores Transformer-based Natural Language Processing approaches.
-
-The evaluated Transformer models shown in the results include:
+The project also evaluates Transformer-based architectures:
 
 * BERT
 * RoBERTa
@@ -428,58 +451,15 @@ The evaluated Transformer models shown in the results include:
 * ALBERT
 * TinyBERT
 
-These models investigate whether contextual representations learned by Transformer architectures can be applied to URL classification.
-
----
-
-# ⚙️ Experimental Setup
-
-The overall experimental setup can be represented as:
-
-```text
-                 RAW URL DATA
-                      │
-                      ▼
-              DATA PREPROCESSING
-                      │
-                      ▼
-              FEATURE ENGINEERING
-                      │
-             ┌────────┴────────┐
-             │                 │
-             ▼                 ▼
-       Feature-Based      Tokenized URL
-             │                 │
-             ▼                 ▼
-      Machine Learning    Deep Learning
-             │                 │
-             │                 ▼
-             │             Transformers
-             │                 │
-             └────────┬────────┘
-                      ▼
-                Classification
-                      │
-                      ▼
-                  Evaluation
-                      │
-       ┌──────────────┼──────────────┐
-       ▼              ▼              ▼
-   Accuracy       Precision        Recall
-                      │
-                      ▼
-                  F1-Score
-```
+These models are investigated for their ability to learn contextual representations from URL sequences.
 
 ---
 
 # 📊 RESULTS — 1.56 LAKH DATASET
 
-The **1.56 lakh dataset (~156,000 URLs)** was used for a comprehensive comparison of traditional Machine Learning, Artificial Neural Networks, recurrent architectures, CNNs, attention-based models, and Transformers.
+The 1.56-lakh experiment provides detailed results across Machine Learning, Deep Learning, and Transformer-based approaches.
 
----
-
-## 📋 Complete Model Performance — 1.56 Lakh
+## Complete Model Results
 
 | Model                  | Training Accuracy | Testing Accuracy | Training Loss | Testing Loss |  Precision |     Recall |   F1-Score |
 | ---------------------- | ----------------: | ---------------: | ------------: | -----------: | ---------: | ---------: | ---------: |
@@ -506,61 +486,25 @@ The **1.56 lakh dataset (~156,000 URLs)** was used for a comprehensive compariso
 
 # 🏆 Best Results — 1.56 Lakh
 
-## 🥇 Highest Testing Accuracy
+### 🥇 Highest Testing Accuracy
 
-### 1D CNN
+**1D CNN — 96.76%**
 
-**Testing Accuracy: 96.76%**
+### 🥇 Highest F1-Score
 
-| Metric            |      Score |
-| ----------------- | ---------: |
-| Training Accuracy | **97.71%** |
-| Testing Accuracy  | **96.76%** |
-| Training Loss     | **0.0636** |
-| Testing Loss      |     0.1170 |
-| Precision         | **96.02%** |
-| Recall            |     98.90% |
-| F1-Score          | **97.44%** |
+**BiLSTM + Attention — 97.45%**
 
----
+### 🥇 Highest Recall
 
-# 🥇 Highest F1-Score
+**GRU — 99.09%**
 
-### BiLSTM + Attention
+### 🥇 Lowest Testing Loss
 
-**F1-Score: 97.45%**
-
-| Metric            |      Score |
-| ----------------- | ---------: |
-| Training Accuracy |     97.60% |
-| Testing Accuracy  |     96.70% |
-| Training Loss     |     0.0644 |
-| Testing Loss      |     0.1058 |
-| Precision         |     95.92% |
-| Recall            |     99.02% |
-| **F1-Score**      | **97.45%** |
+**Hybrid DL Model — 0.1035**
 
 ---
 
-# 🥇 Highest Recall
-
-### GRU
-
-**Recall: 99.09%**
-
-| Metric            |      Score |
-| ----------------- | ---------: |
-| Training Accuracy |     97.53% |
-| Testing Accuracy  |     96.55% |
-| Training Loss     |     0.0660 |
-| Testing Loss      |     0.1164 |
-| Precision         |     95.76% |
-| **Recall**        | **99.09%** |
-| F1-Score          |     97.39% |
-
----
-
-# 🧠 Deep Learning Top Performers
+# 📊 Top Deep Learning Results
 
 | Model                  | Testing Accuracy |  Precision |     Recall |   F1-Score |
 | ---------------------- | ---------------: | ---------: | ---------: | ---------: |
@@ -575,48 +519,76 @@ The **1.56 lakh dataset (~156,000 URLs)** was used for a comprehensive compariso
 
 # 📊 RESULTS — 5 LAKH DATASET
 
-The project also includes experimentation using approximately **5 lakh URLs (~500,000 URLs)**.
+## Dataset Description
 
-This dataset represents an intermediate scale between the 1.56-lakh and 15-lakh experiments.
+The project uses a dedicated dataset of approximately:
 
-The 5-lakh experiment is part of the project's large-scale URL analysis and provides a larger data environment for evaluating phishing detection techniques.
+# **5 Lakh URLs (~500,000 URLs)**
 
-### Important
+collected from:
 
-The material provided here confirms the **5-lakh dataset as part of the project**, but does not provide a complete 5-lakh model-results table.
+### **CommonCrawl + PhishTank**
 
-Therefore, exact 5-lakh:
+The purpose of this dataset is to evaluate the phishing detection system at a larger scale than the 1.56-lakh experiment.
 
-* Accuracy
-* Precision
-* Recall
-* F1-score
-* Training Loss
-* Testing Loss
+The 5-lakh dataset therefore represents an important intermediate stage in the project:
 
-should be added from the corresponding experiment output rather than estimated.
+```text
+1.56 Lakh
+   ↓
+5 Lakh
+   ↓
+15 Lakh
+```
+
+### Data Source
+
+| Source               | Role              |
+| -------------------- | ----------------- |
+| **CommonCrawl**      | Web URL data      |
+| **PhishTank**        | Phishing URL data |
+| **Combined Dataset** | ~5 Lakh URLs      |
+
+### 5-Lakh Dataset Pipeline
+
+```text
+CommonCrawl + PhishTank
+          ↓
+      URL Collection
+          ↓
+      Data Cleaning
+          ↓
+     URL Processing
+          ↓
+ Feature Extraction /
+    Tokenization
+          ↓
+      Model Training
+          ↓
+       Testing
+          ↓
+     Evaluation
+```
+
+> **Note:** The exact model-wise performance values for the 5-lakh experiment are not included in the information currently provided, so they should not be fabricated. The README should contain the actual Accuracy, Precision, Recall, and F1-score values from your 5-lakh experiment when available.
 
 ---
 
 # 📊 RESULTS — 15 LAKH DATASET
 
-The project also uses approximately:
+The largest reported dataset contains:
 
-# **15 LAKH URLs**
+# **15 Lakh URLs (~1.5 Million URLs)**
 
-or approximately:
+### Sources:
 
-# **1.5 Million URLs**
+**CommonCrawl + PhishTank**
 
-The provided result specifically describes:
-
-> **15 Lakh URLs from CommonCrawl and PhishTank**
-
-This experiment is used for large-scale Machine Learning evaluation.
+This experiment focuses on large-scale Machine Learning evaluation.
 
 ---
 
-# 🤖 Machine Learning Results — 15 Lakh URLs
+# 🤖 15 Lakh Machine Learning Results
 
 | Model               |   Accuracy |  Precision |     Recall |   F1-Score |
 | ------------------- | ---------: | ---------: | ---------: | ---------: |
@@ -632,414 +604,139 @@ This experiment is used for large-scale Machine Learning evaluation.
 
 ---
 
-# 🏆 Best Model — 15 Lakh Dataset
+# 🏆 Best Model — 15 Lakh
 
 ## Random Forest
 
-Random Forest achieved the best reported overall performance in this Machine Learning experiment.
+Random Forest achieved the highest reported performance among the evaluated Machine Learning models.
 
-### ⭐ Accuracy: **95.55%**
-
-### ⭐ Precision: **95.56%**
-
-### ⭐ Recall: **95.26%**
-
-### ⭐ F1-Score: **95.41%**
-
----
-
-# 📊 15 Lakh Model Ranking
-
-| Rank | Model               |   Accuracy |   F1-Score |
-| ---: | ------------------- | ---------: | ---------: |
-|   🥇 | **Random Forest**   | **95.55%** | **95.41%** |
-|   🥈 | XGBoost             |     92.29% |     92.07% |
-|   🥉 | Decision Tree       |     91.54% |     91.26% |
-|    4 | LightGBM            |     88.13% |     87.83% |
-|    5 | Hybrid Ensemble     |     78.24% |     74.29% |
-|    6 | AdaBoost            |     72.78% |     71.05% |
-|    7 | Logistic Regression |     65.73% |     63.23% |
-|    8 | Linear Regression   |     65.59% |     62.89% |
-|    9 | Naive Bayes         |     56.72% |     33.32% |
+| Metric        |     Result |
+| ------------- | ---------: |
+| **Accuracy**  | **95.55%** |
+| **Precision** | **95.56%** |
+| **Recall**    | **95.26%** |
+| **F1-Score**  | **95.41%** |
 
 ---
 
-# 🤖 Transformer Results
+# 🤗 Transformer Results
 
-The project also includes a dedicated Transformer-model comparison.
+The reported Transformer comparison includes:
 
-The reported models are:
-
-* BERT
-* RoBERTa
-* DistilBERT
-* mBERT
-* ALBERT
-* TinyBERT
-
----
-
-# 📊 Consolidated Transformer Performance
-
-| Rank | Model       |   Accuracy | Precision | Recall |   F1-Score | Training Time |
-| ---: | ----------- | ---------: | --------: | -----: | ---------: | ------------: |
-|    1 | **RoBERTa** | **96.20%** |    96.68% | 95.49% | **96.08%** |    537.27 sec |
-|    2 | DistilBERT  |     95.50% |    95.48% | 95.29% |     95.38% |    327.44 sec |
-|    3 | mBERT       |     93.30% |    92.53% | 93.85% |     93.18% |    812.79 sec |
-|    4 | TinyBERT    |     92.70% |    92.78% | 92.21% |     92.49% | **62.85 sec** |
-|    5 | BERT        |     92.80% |    92.44% | 92.83% |     92.63% |    483.50 sec |
-|    6 | ALBERT      |     92.20% |    90.04% | 94.47% |     92.20% |    392.59 sec |
+| Model       |   Accuracy |  Precision | Recall |   F1-Score | Training Time |
+| ----------- | ---------: | ---------: | -----: | ---------: | ------------: |
+| **RoBERTa** | **96.20%** | **96.68%** | 95.49% | **96.08%** |    537.27 sec |
+| DistilBERT  |     95.50% |     95.48% | 95.29% |     95.38% |    327.44 sec |
+| mBERT       |     93.30% |     92.53% | 93.85% |     93.18% |    812.79 sec |
+| TinyBERT    |     92.70% |     92.78% | 92.21% |     92.49% | **62.85 sec** |
+| BERT        |     92.80% |     92.44% | 92.83% |     92.63% |    483.50 sec |
+| ALBERT      |     92.20% |     90.04% | 94.47% |     92.20% |    392.59 sec |
 
 ---
 
-# 🥇 Best Transformer — RoBERTa
+# 🥇 Best Transformer
 
-Among the reported Transformer models, **RoBERTa** achieved the highest accuracy.
+### **RoBERTa**
 
-### **Accuracy = 96.20%**
+RoBERTa achieved:
 
-It also achieved:
+* **Accuracy:** 96.20%
+* **Precision:** 96.68%
+* **Recall:** 95.49%
+* **F1-Score:** 96.08%
 
-* Precision = **96.68%**
-* Recall = **95.49%**
-* F1-score = **96.08%**
-
-Therefore, RoBERTa was the strongest-performing Transformer in the reported comparison.
+It was the best-performing Transformer in the reported comparison.
 
 ---
 
-# ⚡ Fastest Transformer — TinyBERT
+# ⚡ Fastest Transformer
 
-Although TinyBERT did not achieve the highest accuracy, it had the lowest reported training time.
+### **TinyBERT**
 
-### **Training Time = 62.85 seconds**
+TinyBERT achieved the lowest reported training time:
 
-This highlights an important trade-off:
+### **62.85 seconds**
+
+This demonstrates that model performance and computational efficiency can involve a trade-off.
+
+---
+
+# 🏆 Overall Results Summary
+
+| Dataset / Experiment | Dataset Size | Source                      | Best Model             |                             Best Result |
+| -------------------- | -----------: | --------------------------- | ---------------------- | --------------------------------------: |
+| **1.56 Lakh**        |        ~156K | Project dataset             | **1D CNN**             |             **96.76% Testing Accuracy** |
+| **1.56 Lakh**        |        ~156K | Project dataset             | **BiLSTM + Attention** |                           **97.45% F1** |
+| **1.56 Lakh**        |        ~156K | Project dataset             | **GRU**                |                       **99.09% Recall** |
+| **5 Lakh**           |    **~500K** | **CommonCrawl + PhishTank** | —                      | Actual experiment result to be inserted |
+| **15 Lakh**          |    **~1.5M** | **CommonCrawl + PhishTank** | **Random Forest**      |                     **95.55% Accuracy** |
+| Transformer          |            — | URL-based NLP               | **RoBERTa**            |                     **96.20% Accuracy** |
+
+---
+
+# 📈 Overall Dataset Progression
+
+The complete project can be summarized as:
 
 ```text
-Higher Performance
-       ↕
-Computational Cost
-```
-
-A model may provide very high accuracy while requiring more training resources, whereas a smaller model may train considerably faster.
-
----
-
-# 🔬 Transformer Comparison
-
-| Model       |   Accuracy |   F1-Score | Training Time |
-| ----------- | ---------: | ---------: | ------------: |
-| **RoBERTa** | **96.20%** | **96.08%** |      537.27 s |
-| DistilBERT  |     95.50% |     95.38% |      327.44 s |
-| mBERT       |     93.30% |     93.18% |      812.79 s |
-| TinyBERT    |     92.70% |     92.49% |   **62.85 s** |
-| BERT        |     92.80% |     92.63% |      483.50 s |
-| ALBERT      |     92.20% |     92.20% |      392.59 s |
-
----
-
-# 🏆 Overall Best Reported Models
-
-Based strictly on the results provided:
-
-| Category                            | Best Model             |   Best Result |
-| ----------------------------------- | ---------------------- | ------------: |
-| **1.56 Lakh — Testing Accuracy**    | **1D CNN**             |    **96.76%** |
-| **1.56 Lakh — F1-Score**            | **BiLSTM + Attention** |    **97.45%** |
-| **1.56 Lakh — Recall**              | **GRU**                |    **99.09%** |
-| **1.56 Lakh — Lowest Testing Loss** | **Hybrid DL Model**    |    **0.1035** |
-| **15 Lakh — ML Accuracy**           | **Random Forest**      |    **95.55%** |
-| **15 Lakh — ML F1-Score**           | **Random Forest**      |    **95.41%** |
-| **Transformer — Accuracy**          | **RoBERTa**            |    **96.20%** |
-| **Transformer — F1-Score**          | **RoBERTa**            |    **96.08%** |
-| **Transformer — Fastest Training**  | **TinyBERT**           | **62.85 sec** |
-
----
-
-# 📈 Overall Dataset Comparison
-
-| Dataset       | Approx. URLs | Main Experiment             | Best Reported Model      |        Best Reported Metric |
-| ------------- | -----------: | --------------------------- | ------------------------ | --------------------------: |
-| **1.56 Lakh** |        ~156K | ML + DL + Transformer       | 1D CNN                   | **96.76% Testing Accuracy** |
-| **5 Lakh**    |        ~500K | Large-scale URL experiment  | Result not provided here |                           — |
-| **15 Lakh**   |        ~1.5M | Common Crawl + PhishTank ML | Random Forest            |         **95.55% Accuracy** |
-
----
-
-# 🔍 Detailed Performance Analysis
-
-## Traditional Machine Learning
-
-Traditional Machine Learning models showed varying performance.
-
-The linear and probabilistic models generally produced lower accuracy in the reported large-scale experiment.
-
-For example:
-
-* Logistic Regression: **65.73%**
-* Linear Regression: **65.59%**
-* Naive Bayes: **56.72%**
-
-Tree-based models performed considerably better:
-
-* Decision Tree: **91.54%**
-* XGBoost: **92.29%**
-* Random Forest: **95.55%**
-
-This indicates that the relationships between URL characteristics and phishing labels can be complex and non-linear.
-
----
-
-# 🌲 Random Forest Analysis
-
-Random Forest was the strongest reported traditional Machine Learning model.
-
-Its performance:
-
-```text
-Accuracy  → 95.55%
-Precision → 95.56%
-Recall    → 95.26%
-F1-Score  → 95.41%
-```
-
-The close relationship between precision and recall indicates a balanced classification performance in the reported experiment.
-
----
-
-# 🧠 Deep Learning Analysis
-
-The Deep Learning models showed particularly strong results in the 1.56-lakh experiment.
-
-The highest-performing group was:
-
-```text
-1D CNN
-BiLSTM + Attention
-Hybrid DL
-GRU
-LSTM
-```
-
-All of these models achieved approximately **96.5%+ testing accuracy**.
-
-Their F1-scores were also approximately **97%**, demonstrating strong overall classification performance.
-
----
-
-# 🔄 Sequence Learning Analysis
-
-RNN-based architectures such as:
-
-* RNN
-* LSTM
-* GRU
-* BiLSTM + Attention
-
-were used to investigate sequential URL patterns.
-
-The basic RNN achieved lower performance than the more advanced recurrent architectures.
-
-The transition can be observed as:
-
-```text
-RNN
- ↓
-LSTM / GRU
- ↓
-BiLSTM + Attention
-```
-
-The reported results show a substantial improvement when moving from the basic RNN to more advanced sequence architectures.
-
----
-
-# 🧩 Attention-Based Learning
-
-BiLSTM + Attention achieved the highest reported F1-score:
-
-### **97.45%**
-
-Attention mechanisms allow the architecture to place greater importance on informative portions of the sequence.
-
-For URL analysis, this is useful because specific parts of a URL may contain stronger phishing indicators than others.
-
----
-
-# 🧬 CNN-Based URL Analysis
-
-The 1D CNN achieved:
-
-### **96.76% Testing Accuracy**
-
-CNN-based architectures can identify local patterns in sequences.
-
-For URL classification, these patterns may correspond to combinations of characters or tokens that frequently occur in suspicious URLs.
-
----
-
-# 🤗 Transformer Analysis
-
-The Transformer experiment demonstrates that pretrained NLP architectures can also be applied to URL sequences.
-
-Among the evaluated models:
-
-### RoBERTa performed best.
-
-```text
-Accuracy  = 96.20%
-Precision = 96.68%
-Recall    = 95.49%
-F1-Score  = 96.08%
-```
-
-This demonstrates the potential of contextual Transformer representations for URL-based phishing detection.
-
----
-
-# 📊 Complete Experimental Comparison
-
-The overall research direction can be summarized as:
-
-```text
-                 PHISHING URL DETECTION
-                         │
-                         ▼
-              ┌────────────────────┐
-              │ Multiple Data Sizes │
-              └─────────┬──────────┘
-                        │
-          ┌─────────────┼─────────────┐
-          ▼             ▼             ▼
-      1.56 Lakh       5 Lakh       15 Lakh
-          │             │             │
-          ▼             ▼             ▼
-       ML + DL       Large Scale   Common Crawl
-      + Transformer      Study      + PhishTank
-          │                           │
-          ▼                           ▼
-      Model Study                ML Comparison
-          │                           │
-          └─────────────┬─────────────┘
-                        ▼
-                 PERFORMANCE
-                   ANALYSIS
+                  PHISHING URL DETECTION
+                           │
+                           ▼
+                    1.56 LAKH URLs
+                           │
+                Detailed ML/DL/NLP
+                           │
+                           ▼
+                      5 LAKH URLs
+                           │
+                  CommonCrawl +
+                     PhishTank
+                           │
+                           ▼
+                     15 LAKH URLs
+                           │
+                  CommonCrawl +
+                     PhishTank
+                           │
+                           ▼
+                  LARGE-SCALE STUDY
 ```
 
 ---
 
-# 🚀 Scalability Analysis
+# 🔬 Key Findings
 
-One of the major strengths of this project is that it does not restrict experimentation to a single small dataset.
+### Finding 1 — Strong Deep Learning Performance
 
-The project progresses through:
+The 1.56-lakh experiment showed very strong performance from Deep Learning architectures.
 
-### **1.56 Lakh → 5 Lakh → 15 Lakh URLs**
+The 1D CNN achieved **96.76% testing accuracy**, while BiLSTM + Attention achieved the highest reported F1-score of **97.45%**.
 
-This represents a substantial increase in the amount of data.
+### Finding 2 — High Recall
 
-| Scale     | Approximate Data |
-| --------- | ---------------: |
-| 1.56 Lakh |          156,000 |
-| 5 Lakh    |          500,000 |
-| 15 Lakh   |        1,500,000 |
+GRU achieved **99.09% recall**, demonstrating strong detection of the positive class in the reported experiment.
 
-The largest dataset therefore contains approximately **1.5 million URLs**.
+### Finding 3 — Strong Traditional ML at Large Scale
 
-This scale provides an opportunity to investigate how URL-based phishing detection approaches behave as the amount of available data increases.
+On the 15-lakh dataset, Random Forest achieved **95.55% accuracy** and **95.41% F1-score**.
 
----
+### Finding 4 — Transformer Performance
 
-# 🧪 Evaluation Metrics
+RoBERTa achieved **96.20% accuracy** and **96.08% F1-score** in the reported Transformer comparison.
 
-The project uses several evaluation metrics.
+### Finding 5 — Large-Scale Dataset
 
-## Accuracy
+The project extends up to **15 lakh URLs**, demonstrating experimentation beyond a small dataset.
 
-Measures the overall proportion of correctly classified URLs.
+### Finding 6 — CommonCrawl + PhishTank
 
-```text
-Accuracy =
-Correct Predictions / Total Predictions
-```
-
----
-
-## Precision
-
-Measures how many URLs predicted as phishing are actually phishing.
-
-High precision means fewer false-positive predictions.
-
----
-
-## Recall
-
-Measures how many actual phishing URLs are successfully detected.
-
-Recall is especially important in phishing detection because failing to identify a phishing URL can have serious consequences.
-
----
-
-## F1-Score
-
-F1-score provides a balance between precision and recall.
-
-```text
-F1 = 2 × (Precision × Recall)
-     -------------------------
-       Precision + Recall
-```
-
----
-
-## Training Loss
-
-Training loss represents the model's error during training.
-
----
-
-## Testing Loss
-
-Testing loss provides information about model performance on unseen data.
-
----
-
-# 🗂️ Project Structure
-
-A suitable repository structure for the project is:
-
-```text
-Automated-Detection-of-Phishing-Websites-Through-URL-Based-Natural-Language-Processing/
-│
-├── README.md
-│
-├── MY_kaggle.ipynb
-│
-├── 15_lakh_dataset/
-│   └── ...
-│
-├── 15_lakh_dataset_commoncrawl/
-│   └── ...
-│
-├── 5_lakh_DL_Common_Crawl/
-│   └── ...
-│
-├── 5_lakh_ML_Common_Crawl/
-│   └── ...
-│
-└── results/
-    └── ...
-```
+The **5-lakh and 15-lakh datasets specifically use CommonCrawl and PhishTank**, combining web URL data with phishing URL data.
 
 ---
 
 # 🛠️ Technologies Used
 
-The project is based on Python and Machine Learning / Deep Learning technologies.
-
-### Programming
+### Programming Language
 
 * Python
 
@@ -1054,26 +751,27 @@ The project is based on Python and Machine Learning / Deep Learning technologies
 * Random Forest
 * Logistic Regression
 * Decision Tree
-* KNN
 * Naive Bayes
+* KNN
 * SVC
 * AdaBoost
 * Voting Classifier
 
-### Gradient Boosting
+### Boosting
 
 * XGBoost
 * LightGBM
 
 ### Deep Learning
 
-* Neural Networks
+* ANN
+* CNN
 * RNN
 * LSTM
 * GRU
-* CNN
 * BiLSTM
 * Attention
+* Hybrid DL
 
 ### NLP / Transformers
 
@@ -1086,138 +784,23 @@ The project is based on Python and Machine Learning / Deep Learning technologies
 
 ---
 
-# 🔬 Research Contribution
+# 📌 Conclusion
 
-The project provides a broad experimental study of URL-based phishing detection by combining:
+This project presents a comprehensive study of **automated phishing website detection using URL-based Natural Language Processing, Machine Learning, Deep Learning, and Transformer architectures**.
 
-### 1. Multiple Dataset Scales
+The project evaluates URL classification across multiple scales, beginning with approximately **1.56 lakh URLs**, followed by **5 lakh URLs**, and finally reaching approximately **15 lakh URLs**.
 
-```text
-156K → 500K → 1.5M URLs
-```
+The **5-lakh and 15-lakh datasets were specifically constructed using CommonCrawl and PhishTank**, providing a combination of web URL data and phishing URL data for large-scale experimentation.
 
-### 2. Multiple ML Algorithms
+The reported results demonstrate strong performance across several model families:
 
-Traditional feature-based approaches are compared.
+| Area                         | Best Model             |     Result |
+| ---------------------------- | ---------------------- | ---------: |
+| 1.56 Lakh — Testing Accuracy | **1D CNN**             | **96.76%** |
+| 1.56 Lakh — F1-Score         | **BiLSTM + Attention** | **97.45%** |
+| 1.56 Lakh — Recall           | **GRU**                | **99.09%** |
+| 15 Lakh — ML Accuracy        | **Random Forest**      | **95.55%** |
+| Transformer — Accuracy       | **RoBERTa**            | **96.20%** |
+| Transformer — F1-Score       | **RoBERTa**            | **96.08%** |
 
-### 3. Multiple Deep Learning Architectures
-
-Sequence-based models are evaluated.
-
-### 4. Transformer-Based NLP
-
-Modern contextual language models are investigated for URL classification.
-
-### 5. Comparative Evaluation
-
-Models are compared using multiple performance metrics rather than accuracy alone.
-
----
-
-# 🏆 Key Findings
-
-Based on the reported results:
-
-### Finding 1
-
-The **1D CNN** achieved the highest testing accuracy in the 1.56-lakh model comparison:
-
-> **96.76%**
-
-### Finding 2
-
-**BiLSTM + Attention** achieved the highest reported F1-score:
-
-> **97.45%**
-
-### Finding 3
-
-**GRU** achieved the highest reported recall:
-
-> **99.09%**
-
-### Finding 4
-
-**Random Forest** was the strongest reported traditional ML model in the 15-lakh experiment:
-
-> **95.55% Accuracy**
-
-### Finding 5
-
-**RoBERTa** achieved the strongest reported Transformer accuracy:
-
-> **96.20%**
-
-### Finding 6
-
-**TinyBERT** had the lowest reported Transformer training time:
-
-> **62.85 seconds**
-
----
-
-# ⚠️ Important Experimental Note
-
-The different dataset experiments should not be interpreted as a perfectly controlled benchmark because the reported experiments differ in:
-
-* Dataset size
-* Feature representation
-* URL representation
-* Model family
-* Experimental configuration
-
-Therefore, the results are best interpreted as **separate experimental evaluations** rather than a single universal leaderboard.
-
-In particular:
-
-```text
-1.56 Lakh results
-        ≠
-5 Lakh results
-        ≠
-15 Lakh results
-```
-
-unless all experimental conditions are kept identical.
-
----
-
-# 🏁 Conclusion
-
-This project presents a comprehensive approach toward **Automated Detection of Phishing Websites Through URL-Based Natural Language Processing**.
-
-Rather than relying on a single classification algorithm, the project investigates a broad range of approaches, including:
-
-* Traditional Machine Learning
-* Ensemble Learning
-* Deep Learning
-* Recurrent Neural Networks
-* CNNs
-* Attention mechanisms
-* Transformer architectures
-
-The project also investigates URL datasets at multiple scales:
-
-### **1.56 Lakh URLs**
-
-providing a detailed comparison of ML, DL, and Transformer architectures.
-
-### **5 Lakh URLs**
-
-providing an intermediate large-scale URL experimentation environment.
-
-### **15 Lakh URLs**
-
-providing a very large-scale dataset involving **Common Crawl and PhishTank** URL data.
-
-The strongest reported results include:
-
-| Experimental Area      | Best Model             |     Result |
-| ---------------------- | ---------------------- | ---------: |
-| 1.56 Lakh — Accuracy   | **1D CNN**             | **96.76%** |
-| 1.56 Lakh — F1         | **BiLSTM + Attention** | **97.45%** |
-| 1.56 Lakh — Recall     | **GRU**                | **99.09%** |
-| 15 Lakh — ML Accuracy  | **Random Forest**      | **95.55%** |
-| Transformer — Accuracy | **RoBERTa**            | **96.20%** |
-
-Overall, the experiments demonstrate the potential of **URL-based Machine Learning, Deep Learning, and NLP techniques for automated phishing detection**, while the use of datasets ranging from approximately **156,000 to 1.5 million URLs** provides a strong large-scale experimental foundation for the project.
+Overall, the project demonstrates that **URL-based patterns can be effectively investigated using Machine Learning, Deep Learning, and NLP techniques**, while the progression from **1.56 lakh → 5 lakh → 15 lakh URLs** provides a strong foundation for studying phishing detection at increasingly large data scales.
