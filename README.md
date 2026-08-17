@@ -1,9 +1,3 @@
-Yes. **Let's start completely from scratch** and build the README as a proper end-to-end project README — from **Project Overview → Objectives → Datasets → 1.56 Lakh → 5 Lakh → 15 Lakh → ML → DL → Transformer → Results → Comparison → Conclusion**.
-
-I’ll use **only the results visible in the material you provided**. Where an exact 5-lakh result is not shown, I will clearly mark it instead of making up numbers.
-
----
-
 # 🛡️ Automated Detection of Phishing Websites Through URL-Based Natural Language Processing
 
 An intelligent machine-learning and deep-learning based system for the **automated detection of phishing and legitimate websites using URL-based analysis**.
