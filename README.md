@@ -28,48 +28,6 @@ The models are evaluated using multiple performance metrics, including:
 
 The project experiments with large-scale URL datasets collected from sources including **Kaggle, Common Crawl, and PhishTank**, with experiments involving approximately **5 lakh and 15 lakh URL records**. 
 
----
-
-# 📌 Table of Contents
-
-* [Project Overview](#-project-overview)
-* [Problem Statement](#-problem-statement)
-* [Why Phishing URL Detection?](#-why-phishing-url-detection)
-* [Objectives](#-objectives)
-* [Key Features](#-key-features)
-* [Dataset](#-dataset)
-* [Data Sources](#-data-sources)
-* [Data Processing Pipeline](#-data-processing-pipeline)
-* [Feature Engineering](#-feature-engineering)
-* [URL Representation](#-url-representation)
-* [Models Implemented](#-models-implemented)
-* [Machine Learning Models](#-machine-learning-models)
-* [Deep Learning Models](#-deep-learning-models)
-* [Hybrid CNN + LSTM](#-hybrid-cnn--lstm)
-* [Transformer Models](#-transformer-models)
-* [Machine Learning Results](#-machine-learning-results)
-* [Detailed ML Analysis](#-detailed-ml-analysis)
-* [Transformer Results](#-transformer-results)
-* [Detailed Transformer Analysis](#-detailed-transformer-analysis)
-* [Training vs Testing Performance](#-training-vs-testing-performance)
-* [Comprehensive Model Benchmark](#-comprehensive-model-benchmark)
-* [Overall Model Comparison](#-overall-model-comparison)
-* [Evaluation Metrics](#-evaluation-metrics)
-* [Project Workflow](#-project-workflow)
-* [Technologies Used](#-technologies-used)
-* [Repository Structure](#-repository-structure)
-* [Visual Analysis](#-visual-analysis)
-* [Key Findings](#-key-findings)
-* [Performance vs Computational Cost](#-performance-vs-computational-cost)
-* [Potential Applications](#-potential-applications)
-* [Future Improvements](#-future-improvements)
-* [Experimental Limitations](#-experimental-limitations)
-* [Security Disclaimer](#-security-disclaimer)
-* [Conclusion](#-conclusion)
-* [Author](#-author)
-
----
-
 # 🔎 Project Overview
 
 The main objective of this project is to investigate how effectively Artificial Intelligence techniques can detect phishing websites by analyzing **URL-level information**.
