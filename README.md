@@ -1,5 +1,7 @@
 # Automated Detection of Phishing Websites Through URL-Based Natural Language Processing
 
+The main aim of this project is to develop and evaluate a scalable AI-based system that automatically detects phishing URLs by learning their textual and structural patterns using Machine Learning, Deep Learning, and Transformer-based NLP techniques.
+
 ## 🔐 Project Overview
 
 Phishing is one of the most common cybersecurity threats in which attackers create malicious or deceptive websites and URLs to trick users into revealing sensitive information such as passwords, banking credentials, personal information, and account details.
